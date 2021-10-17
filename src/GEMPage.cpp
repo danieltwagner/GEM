@@ -83,6 +83,14 @@ const char* GEMPage::getTitle() {
   return title;
 }
 
+byte GEMPage::getItemsCount(boolean includeHidden) {
+  return includeHidden ? itemsCountTotal : itemsCount;
+}
+
+byte GEMPage::getCurrentItemNum() {
+  return currentItemNum;
+}
+
 GEMItem* GEMPage::getMenuItem(byte index, boolean total) {
   GEMItem* menuItemTmp = (!total && _menuItem->hidden) ? _menuItem->getMenuItemNext() : _menuItem;
   for (byte i=0; i<index; i++) {

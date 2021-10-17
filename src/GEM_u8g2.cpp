@@ -222,6 +222,10 @@ void GEM_u8g2::setMenuPageCurrent(GEMPage& menuPageCurrent) {
   _menuPageCurrent = &menuPageCurrent;
 }
 
+GEMPage *GEM_u8g2::getCurrentPage() {
+  return _menuPageCurrent;
+}
+
 //====================== CONTEXT OPERATIONS
 
 void GEM_u8g2::clearContext() {

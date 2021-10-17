@@ -189,6 +189,10 @@ void GEM::setMenuPageCurrent(GEMPage& menuPageCurrent) {
   _menuPageCurrent = &menuPageCurrent;
 }
 
+GEMPage *GEM::getCurrentPage() {
+  return _menuPageCurrent;
+}
+
 //====================== CONTEXT OPERATIONS
 
 void GEM::clearContext() {

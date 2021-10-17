@@ -56,6 +56,8 @@ class GEMPage {
     void setParentMenuPage(GEMPage& parentMenuPage);  // Specify parent level menu page (to know where to go back to when pressing Back button)
     void setTitle(const char* title_);                // Set title of the menu page
     const char* getTitle();                           // Get title of the menu page
+    byte getItemsCount(boolean includeHidden = false);
+    byte getCurrentItemNum();
   private:
     const char* title;
     byte currentItemNum = 0;                          // Currently selected (focused) menu item of the page
