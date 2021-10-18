@@ -496,6 +496,7 @@ void GEM_u8g2::menuItemSelect() {
   switch (menuItemTmp->type) {
     case GEM_ITEM_VAL:
       if (!menuItemTmp->readonly) {
+        if (menuItemTmp->enterAction) menuItemTmp->enterAction(menuItemTmp);
         enterEditValueMode();
       }
       break;
